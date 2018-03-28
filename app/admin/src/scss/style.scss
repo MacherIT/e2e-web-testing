@@ -1,0 +1,45 @@
+.ng-cloak,
+.x-ng-cloak,
+[data-ng-cloak],
+[ng-cloak],
+[ng\:cloak],
+[x-ng-cloak] {
+    display: none !important;
+}
+
+img {
+    border-radius: 5px;
+    padding: 2%;
+    -webkit-box-shadow: 0 0 0 1px #ccc;
+    box-shadow: 0 0 0 1px #ccc;
+    width: 96%;
+}
+
+.required {
+    -webkit-box-shadow: inset -5px 0 0 0 #fcc;
+    box-shadow: inset -5px 0 0 0 #fcc;
+}
+
+form {
+    margin-bottom: 50px;
+
+    input[type='file']:not(.not-tall) {
+        height: 110%;
+    }
+
+    hr,
+    input,
+    select {
+        margin: 5px 0;
+    }
+
+    textarea {
+        margin: 15px 0;
+    }
+
+    *.ng-touched.ng-invalid,
+    *.ng-touched.ng-invalid,
+    *.ng-touched.ng-invalid {
+        border-bottom: 1px solid #f66;
+    }
+}

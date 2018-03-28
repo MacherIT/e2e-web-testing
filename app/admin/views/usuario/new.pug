@@ -1,0 +1,27 @@
+.col-xs-6.col-xs-offset-3
+    h1 Registrar Nuevo Usuario
+    .alert.alert-danger(ng-if="dupped == true")
+        span El 
+        strong email 
+        span ya esta en uso
+    .alert.alert-danger(ng-if="notMatch == true")
+        span Las 
+        strong contraseñas 
+        span no coinciden
+    form.control-group(encType="multipart/form-data", name="formregister", ng-submit="formregister.$valid && registrarUsuario()", novalidate="novalidate")
+        input.required.form-control(type="email", name="email", ng-model="nuevoUsuario.email", placeholder="Email", required)
+        input.required.form-control(type="password", name="password", ng-model="passwordCheck", placeholder="Contraseña", required)
+        input.form-control(type="password", name="password", ng-model="nuevoUsuario.password", placeholder="Confirmar Contraseña", required)
+        .row
+            .col-xs-6
+                input.required.form-control(type="text", name="nombre", ng-model="nuevoUsuario.nombre", placeholder="Nombre", required)
+            .col-xs-6
+                input.required.form-control(type="text", name="apellido", ng-model="nuevoUsuario.apellido", placeholder="Apellido", required)
+        .col-xs-3
+            h5 Avatar
+            hr
+            hr
+        .col-xs-9
+            input.required#usuario-avatar.form-control(autocomplete="off", type="file", accept="image/*", name="avatar", placeholder="Avatar", required)
+        input.form-control.btn.btn-success(type="submit", name="submit", value="Enviar", ng-disabled="formregister.$dirty && formregister.$invalid")
+    

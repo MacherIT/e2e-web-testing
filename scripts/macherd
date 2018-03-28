@@ -1,0 +1,95 @@
+#!/bin/bash
+
+export PORT="50700"
+export MONGODB_URI="mongodb://localhost:50701/ant"
+export NODE_ENV='production'
+export PATH=$HOME/Downloads/mongodb/bin:$PATH
+export MAIL_PASS=''
+export DBNAME="ant"
+export MONGO_PORT="50701"
+export mongod=/home/ant/Downloads/mongodb/bin/mongod
+export pm2="/home/ant/bin/node /home/ant/lib/node_modules/pm2/bin/pm2"
+
+
+start() {
+    if [[ ! -d $HOME/mlogs ]]; then
+      echo "Creando directorio de logs"
+      mkdir $HOME/mlogs
+    fi
+    if [[ "$(pgrep $mongod | wc -l)" -lt 1 ]]; then
+      echo "Inicia el servidor de mongo"
+      # nohup $mongod --dbpath $HOME/mongodata/ --port $MONGO_PORT >> $HOME/mlogs/mongo.logs &
+      nohup $mongod --dbpath $HOME/mongodata/ --port $MONGO_PORT >> /dev/null &
+    else
+      echo "Servidor de mongo ya iniciado"
+    fi
+    if [[ "$($pm2 show 0 | wc -l)" -lt 2 ]]; then
+      echo "Inicia el servidor de Express"
+      nohup $pm2 start $HOME/public_html/bin/www --name "$DBNAME" -i 4 &
+      # nohup $pm2 logs >> $HOME/mlogs/express.logs &
+    else
+      echo "Servidor de express ya iniciado"
+    fi
+    return
+}
+
+stop() {
+    if [[ "$(pgrep $mongod | wc -l)" -lt 1 ]]; then
+      echo "El servidor de mongo no esta iniciado"
+    else
+      echo "Cerrando el servidor de mongo"
+      $mongod --shutdown --dbpath $HOME/mongodata/
+    fi
+    if [[ "$($pm2 show 0 | wc -l)" -lt 2 ]]; then
+      echo "El servidor de express no esta iniciado"
+    else
+      echo "Cerrando el servidor de express"
+      $pm2 delete all
+    fi
+    return
+}
+
+#
+# CUIDADO CON LOS NOMBRES DE LOS BACKUPS!!!!!!!!
+#
+
+# backupdb() {
+#     if [[ ! -d $HOME/backupdb ]]; then
+#       echo "Creando directorio de backup"
+#       mkdir $HOME/backupdb
+#     fi
+#     echo "Creando backup de la base de mongo"
+#     echo "------------ NUEVO BACKUP DE MONGO ------------" >> $HOME/mlogs/backupdb.logs
+#     mongodump -h $MONGODB_URI -v -d $DBNAME -o $HOME/backupdb/$DBNAME >> $HOME/mlogs/backupdb.logs
+#     echo "Creando zip del backup"
+#     echo "--------------------" >> $HOME/mlogs/backupdb.logs
+#     zip "$HOME/backupdb/$DBNAME.zip" -r $HOME/backupdb/$DBNAME >> $HOME/mlogs/backupdb.logs
+#     echo "Comenzando clonado de base a Drive"
+#     rclone copy "$HOME/backupdb/$DBNAME.zip" macheritian:/backups/clicpromocionales/
+#     echo "Clonado finalizado"
+#     return
+# }
+
+case "$1" in
+start)
+    start
+    ;;
+stop)
+    stop
+    ;;
+status)
+    echo "Los datos de registro se encuentran en $HOME/mlogs/"
+    ;;
+restart)
+    stop
+    start
+    ;;
+# backupdb)
+#     backupdb
+#     ;;
+*)
+    echo "Usage:  {start|stop|status|restart}"
+    exit 1
+    ;;
+esac
+exit $?

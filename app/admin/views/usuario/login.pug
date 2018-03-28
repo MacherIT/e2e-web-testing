@@ -1,0 +1,7 @@
+.col-xs-6.col-xs-offset-3
+    h1 Iniciar Sesion
+    .alert.alert-danger(ng-show="failLogin") Usuario o contraseña invalidos.
+    form.control-group(name="login", ng-submit="login.$valid && sendForm()", novalidate="novalidate")
+        input.form-control(type="email", name="email", ng-model="email", placeholder="Email")
+        input.form-control(type="password", name="password", ng-model="password", placeholder="Contraseña")
+        input.form-control.btn.btn-success(type="submit", name="submit", value="Enviar")

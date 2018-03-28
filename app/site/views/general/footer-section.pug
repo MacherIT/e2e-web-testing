@@ -1,0 +1,40 @@
+.mapa
+  iframe(load-frame, source="< URL >", allowfullscreen)
+  .formulario
+    .titulo
+      span Contacto
+    form(novalidate, name="formContacto", ng-submit="formContacto.$valid && formcontacto.enviar()")
+      .campo
+        input.required(required, type="text", name="nombre", ng-model="formcontacto.nombre", placeholder="Nombre")
+      .campo
+        input.required(required, type="text", pattern="[0-9]*", name="telefono", ng-model="formcontacto.telefono", placeholder="Teléfono")
+      .campo
+        input.required(required, type="email", name="email", ng-model="formcontacto.email", placeholder="Correo Electrónico")
+      .campo
+        textarea(name="consulta", ng-model="formcontacto.consulta", placeholder="Consulta")
+      .subm
+        input(ng-if="!formcontacto.solicitado", type="submit", value="Enviar", ng-disabled="!formContacto.$valid || sent")
+        .spinner(ng-if="sent")
+          i.fa.fa-circle-o-notch.fa-spin
+        .respuesta(ng-if="formcontacto.solicitado && formcontacto.envioCorrecto")
+          p Solicitud enviada correctamente.
+        .respuesta(ng-if="formcontacto.solicitado && !formcontacto.envioCorrecto")
+          p Sucedió un problema, intentelo nuevamente mas tarde.
+.logo-items
+  .logo
+  .items
+    .item
+      .icono
+        i.fa.fa-phone
+      .texto
+        a(href="tel:-- TELEFONO --", target="_blank") -- TELEFONO --
+    .item
+      .icono
+        i.fa.fa-envelope
+      .texto
+        a(href="mailto:info@ant.com", target="_blank") info@ant.com.ar
+    .item
+      .icono
+        i.fa.fa-map-marker
+      .texto
+        a(href="< url >", target="_blank") -- DIRECCION --

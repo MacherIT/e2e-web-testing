@@ -1,0 +1,24 @@
+body.page-login {
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-form {
+      width: 400px;
+    }
+  }
+
+  form {
+    margin-bottom: 50px;
+
+    hr,
+    input,
+    select {
+      margin: 5px 0;
+    }
+
+    textarea {
+      margin: 15px 0;
+    }
+  }
+}

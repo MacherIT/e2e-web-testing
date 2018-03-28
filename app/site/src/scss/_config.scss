@@ -1,0 +1,150 @@
+$btXS: 575px;
+$btSM: 576px;
+$btMD: 768px;
+$btLG: 992px;
+$btXL: 1199px;
+
+$mqMobileL: 425px;
+$mqMobileM: 375px;
+$mqMobileS: 320px;
+
+@mixin minmaxwh($size) {
+  width: $size !important;
+  min-width: $size !important;
+  max-width: $size !important;
+  height: $size !important;
+  min-height: $size !important;
+  max-height: $size !important;
+}
+
+@mixin ease-transition($duration: 150ms) {
+  -webkit-transition: all $duration ease;
+  -moz-transition: all $duration ease;
+  -ms-transition: all $duration ease;
+  -o-transition: all $duration ease;
+  transition: all $duration ease;
+}
+
+@mixin escalar($cant) {
+  -moz-transform: scale($cant);
+  -webkit-transform: scale($cant);
+  -o-transform: scale($cant);
+  -ms-transform: scale($cant);
+  transform: scale($cant);
+}
+
+@mixin sombra($sombra) {
+  -webkit-box-shadow: $sombra;
+  box-shadow: $sombra;
+}
+
+@mixin not-selectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin grayscale($porcentaje) {
+  filter: grayscale($porcentaje);
+  -webkit-filter: grayscale($porcentaje);
+}
+@mixin sombra-arrojada($sombra) {
+  filter: drop-shadow($sombra);
+  -webkit-filter: drop-shadow($sombra);
+}
+
+@mixin donut-chart($name, $perc, $size, $width, $base, $center, $color, $textColor: $color, $textSize: 40px) {
+  $color2: $color;
+  $base2: $base;
+  $deg: ($perc/100*360)+deg;
+  $deg1: 90deg;
+  $deg2: $deg;
+
+  // If percentage is less than 50%
+  @if $perc < 50 {
+    $base: $color;
+    $color: $base2;
+    $color2: $base2;
+    $deg1: ($perc/100*360+90)+deg;
+    $deg2: 0deg;
+  }
+
+  .donut-chart {
+    &#{$name} {
+      width: $size;
+      height: $size;
+      background: $base;
+
+      .slice {
+        &.one {
+          clip: rect(0 $size $size/2 0);
+          -webkit-transform: rotate($deg1);
+          transform: rotate($deg1);
+          background: $color;
+        }
+
+        &.two {
+          clip: rect(0 $size/2 $size 0);
+          -webkit-transform: rotate($deg2);
+          transform: rotate($deg2);
+          background: $color2;
+        }
+      }
+
+      .chart-center {
+        top: $width;
+        left: $width;
+        width: $size - ($width * 2);
+        height: $size - ($width * 2);
+        background: $center;
+
+        span {
+          font-size: $textSize;
+          line-height: $size - ($width * 2);
+          color: $textColor;
+
+          &:after {
+            content: "#{$perc}%";
+          }
+        }
+      }
+    }
+  }
+} // mixin
+
+@mixin recorta-esquinas-inferiores {
+  &::after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 98%;
+    right: 0;
+    transform-origin: left bottom;
+    background-color: #fff;
+    -moz-transform: skewY(-6deg);
+    -webkit-transform: skewY(-6deg);
+    -o-transform: skewY(-6deg);
+    -ms-transform: skewY(-6deg);
+    transform: skewY(-6deg);
+  }
+
+  &::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 98%;
+    left: 50%;
+    transform-origin: left bottom;
+    background-color: #fff;
+    -moz-transform: scale(-1, 1) skewY(-6deg);
+    -webkit-transform: scale(-1, 1) skewY(-6deg);
+    -o-transform: scale(-1, 1) skewY(-6deg);
+    -ms-transform: scale(-1, 1) skewY(-6deg);
+    transform: scale(-1, 1) skewY(-6deg);
+  }
+}

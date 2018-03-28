@@ -1,0 +1,56 @@
+@import "config";
+@import "fonts";
+@import "animaciones";
+
+.ng-cloak,
+.x-ng-cloak,
+[data-ng-cloak],
+[ng-cloak],
+[ng\:cloak],
+[x-ng-cloak] {
+  display: none !important;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  text-align: center;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  margin: 0;
+  text-align: center;
+}
+
+input,
+select {
+  &.ng-dirty.ng-valid {
+    @include sombra(0 0 1px 0 #1f1);
+  }
+  &.ng-dirty.ng-invalid,
+  &.ng-dirty.ngInvalid {
+    @include sombra(0 0 1px 0 #f11);
+  }
+  &.required::before {
+    content: "*";
+    display: block;
+    float: right;
+    color: "#666";
+    margin-left: 2px;
+    color: #f33;
+  }
+}
+
+body {
+  background-color: #fff;
+  min-width: $mqMobileS;
+}
+@import "general/index";

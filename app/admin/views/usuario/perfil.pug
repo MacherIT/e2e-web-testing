@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-body
+    .col-xs-5
+      img(ng-src="{{usuario.avatar}}")
+    .col-xs-7
+      ul.list-group
+        li.list-group-item
+          h1 {{usuario.nombre}} {{usuario.apellido}}
+        li.list-group-item
+          strong Email: 
+          span {{usuario.email}}
+        li.list-group-item
+          strong Contraseña: 
+          span ••••••

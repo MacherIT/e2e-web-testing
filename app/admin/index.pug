@@ -1,0 +1,48 @@
+doctype html
+html(ng-app="AdminApp")
+  head
+    meta(charset="utf-8")
+    title Admin App
+    link(rel="stylesheet", href="/node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="css/style.min.css")
+  body.container(ng-controller="mainController", ng-cloak)
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light(style="text-transform:uppercase", ng-if="isLoggedIn == false")
+      .collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href="#/") Home
+          
+          //- ACA NUEVOS LINKS
+          //- include <nueva-clase>-menu.pug
+          
+        ul.nav.navbar-nav.navbar-right
+          li.nav-item
+            a.nav-link(href="#/usuarios/iniciar-sesion", ng-if="isLoggedIn == false") Iniciar Sesion
+          li.nav-item.dropdown(ng-if="isLoggedIn == true")
+            a.nav-link.dropdown-toggle(href="", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false")
+              span Mi Cuenta
+              span.caret
+            ul.dropdown-menu
+              li.nav-item
+                a.dropdown-item(href="#/usuarios/perfil") Perfil
+              li.nav-item
+                a.dropdown-item(href="#/usuarios/cerrar-sesion") Cerrar Sesion
+
+    ol.breadcrumb(style="text-transform:uppercase", ng-if="isLoggedIn == false")
+      li.breadcrumb-item
+        a(href="#/")
+          span.glyphicon.glyphicon-home
+      li.breadcrumb-item(ng-repeat="ruta in rutas", ng-class="{active: ruta.active}")
+        a(href="#/{{ruta.link}}", ng-if="ruta.active === false") {{ruta.nombre}}
+        span(ng-if="ruta.active === true") {{ruta.nombre}}
+
+
+    div(ng-view, autoscroll="true")
+
+    script(src="/node_modules/jquery/dist/jquery.min.js", charset="utf-8")
+    script(src="/node_modules/bootstrap/dist/js/bootstrap.min.js", charset="utf-8")
+    script(src="/node_modules/angular/angular.min.js", charset="utf-8")
+    script(src="/node_modules/angular-route/angular-route.min.js", charset="utf-8")
+
+    script(src="js/app.min.js", charset="utf-8")
