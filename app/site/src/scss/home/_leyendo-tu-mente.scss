@@ -1,0 +1,66 @@
+leyendo-tu-mente {
+  .cuerpo {
+    justify-content: space-around;
+    & > .titulo {
+      margin-bottom: 40px;
+      span {
+        font-size: 150%;
+      }
+    }
+    .items {
+      margin-bottom: 100px;
+      min-height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .item {
+        width: 350px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        margin: 5px 15px;
+        @include sombra(0 2px 3px 0 #224);
+        .titulo {
+          width: 100%;
+          font-family: $fontTitilliumSemiBold;
+          font-size: 80%;
+          background-color: $colorVioletaGrisaceo;
+          padding: 7px 15px;
+          cursor: pointer;
+          @include ease-transition(100ms);
+          @include not-selectable;
+          &:active{
+            background-color: #484b69;
+          }
+          &::before {
+            content: "\f078";
+            font-family: "FontAwesome";
+            color: #fff;
+            font-size: 50%;
+            margin-right: 10px;
+          }
+        }
+        .texto{
+          background-color: $colorVioletaOscuro;
+          padding: 10px;
+          max-height: 350px;
+          overflow: auto;
+          display: none;
+          p{
+            font-size: 90%;
+          }
+        }
+      }
+    }
+    .video {
+      width: 100%;
+      iframe {
+        width: 100%;
+        height: 350px;
+        border: 0;
+        background-color: $colorVioletaGrisaceo;
+      }
+    }
+  }
+}

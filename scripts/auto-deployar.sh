@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IP_SERVIDOR="66.198.240.38"
+IP_SERVIDOR="75.98.172.211"
 DB_MONGO="ant"
 
 init() {
@@ -16,11 +16,12 @@ init() {
     echo "Copia mongo-node.sh"
 
     scp -P 7822 "scripts/mongo-node.sh" "$USUARIO@$IP_SERVIDOR:/home/$USUARIO/scripts/"
-    scp -P 7822 "scripts/macherd" "$USUARIO@$IP_SERVIDOR:/home/$USUARIO/scripts/"
+    #### scp -P 7822 "scripts/macherd" "$USUARIO@$IP_SERVIDOR:/home/$USUARIO/scripts/"
 
     echo "Ejecuta mongo-node.sh e instala mongodb y nodejs"
 
-    ssh "$USUARIO@$IP_SERVIDOR" -p 7822 "chmod +x /home/$USUARIO/scripts/mongo-node.sh; chmod +x /home/$USUARIO/scripts/macherd; ln -s /home/$USUARIO/scripts/macherd /home/$USUARIO/bin/macherd; cd '/home/$USUARIO'; /home/$USUARIO/scripts/./mongo-node.sh"
+    ssh "$USUARIO@$IP_SERVIDOR" -p 7822 "chmod +x /home/$USUARIO/scripts/mongo-node.sh; cd '/home/$USUARIO'; /home/$USUARIO/scripts/./mongo-node.sh"
+    # ssh "$USUARIO@$IP_SERVIDOR" -p 7822 "chmod +x /home/$USUARIO/scripts/mongo-node.sh; chmod +x /home/$USUARIO/scripts/macherd; ln -s /home/$USUARIO/scripts/macherd /home/$USUARIO/bin/macherd; cd '/home/$USUARIO'; /home/$USUARIO/scripts/./mongo-node.sh"
 
   else
 

@@ -1,0 +1,20 @@
+.cuerpo
+  .flex.jcenter.acenter.fcolumn
+    .titulo
+      span {{equipoAnt.titulo}}
+    .descripcion
+      p {{equipoAnt.descripcion}}
+    .menu.flex.jcenter.aend
+      .menu-item(ng-repeat="item in equipoAnt.items track by $index", ng-click="setEquipoItemActivo(item)")
+        .flex.jcenter.acenter.fcolumn
+          .icono(style="background-image: url({{item.icono}})")
+          .titulo(ng-class="{active: equipoItemActivo.titulo == item.titulo}", class="{{ item.titulo | lowercase }}")
+            span {{item.titulo}}
+    .flex.jbetween.acenter.item(ng-repeat="item in equipoAnt.items track by $index", ng-if="equipoItemActivo.titulo == item.titulo")
+      .flex.jcenter.astart.fcolumn.columna
+        .titulo(class="{{ item.titulo | lowercase }}")
+          span {{item.titulo}}
+        .texto.smallSlideInLeft
+          p {{item.texto}}
+      .flex.jcenter.acenter.columna
+        .imagen.fadeIn(style="background-image: url({{item.imagen}})")

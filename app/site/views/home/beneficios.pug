@@ -1,0 +1,17 @@
+.cuerpo
+  .flex.jcenter.astart.fcolumn.izquierda
+    .titulo
+      span {{beneficios.titulo}}
+    .flex.jbetween.acenter.items
+      .flex.jstart.acenter.item(ng-repeat="item in beneficios.items track by $index")
+        .icono(style="background-image: url({{item.icono}})")
+        .flex.jcenter.astart.fcolumn
+          .titulo
+            span {{item.titulo}}
+          .texto
+            p {{item.texto}}
+  .flex.jcenter.acenter.derecha
+    video(loop, autoplay)
+      source(src="{{beneficios.video.mp4}}", type="video/mp4")
+      source(src="{{beneficios.video.webm}}", type="video/webm")
+      | Su navegador no soporta el formato del video

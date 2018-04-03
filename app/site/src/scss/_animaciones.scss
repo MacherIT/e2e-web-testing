@@ -222,8 +222,8 @@
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 700ms;
+  animation-duration: 700ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   transform: translate3d(0, 0, 0);

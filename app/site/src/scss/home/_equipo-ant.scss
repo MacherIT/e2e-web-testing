@@ -1,0 +1,104 @@
+equipo-ant {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/home/fondo-equipo-ant.png");
+  .cuerpo {
+    width: 70%;
+    .titulo{
+      margin-bottom: 25px;
+      span{
+        font-size: 150%;
+      }
+    }
+    .descripcion{
+      p{
+        max-width: 350px;
+        text-align: center;
+        font-size: 90%;
+      }
+    }
+    .menu {
+      width: 100%;
+      margin: 20px 0;
+      .menu-item {
+        width: 25%;
+        cursor: pointer;
+        .icono {
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        .titulo {
+          @include ease-transition();
+          padding-bottom: 5px;
+          &.active {
+            &.administrador {
+              @include sombra(0 4px 0 0 #f7d156);
+            }
+            &.diseñador {
+              @include sombra(0 4px 0 0 #df1284);
+            }
+            &.comunicador {
+              @include sombra(0 4px 0 0 #2dafd0);
+            }
+            &.marketier {
+              @include sombra(0 4px 0 0 #8dc43c);
+            }
+
+            span {
+              color: #fff;
+              font-family: $fontAquawaxBlackTrial;
+            }
+          }
+          span {
+            color: #ccc;
+            font-size: 80%;
+            font-weight: normal;
+            text-transform: uppercase;
+            font-family: $fontAquawaxLightTrial;
+          }
+        }
+      }
+    }
+    .item {
+      width: 100%;
+      .columna {
+        width: 45%;
+        .titulo {
+          &.administrador {
+            span {
+              color: #f7d156;
+            }
+          }
+          &.diseñador {
+            span {
+              color: #df1284;
+            }
+          }
+          &.comunicador {
+            span {
+              color: #2dafd0;
+            }
+          }
+          &.marketier {
+            span {
+              color: #8dc43c;
+            }
+          }
+        }
+        .imagen{
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: block;
+          width: 100%;
+          height: 350px;
+        }
+      }
+    }
+  }
+}

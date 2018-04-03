@@ -6,7 +6,7 @@ NODE_VERSION="${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE '
 
 mkdir "$HOME/Downloads"
 
-curl "downloads.mongodb.org/linux/mongodb-linux-x86_64-amazon-latest.tgz" > "$HOME/Downloads/mongodb-latest.tgz"
+#### curl "downloads.mongodb.org/linux/mongodb-linux-x86_64-amazon-latest.tgz" > "$HOME/Downloads/mongodb-latest.tgz"
 
 curl "https://nodejs.org/dist/latest/node-$NODE_VERSION.tar.xz" > "$HOME/Downloads/node-latest.tar.xz"
 
@@ -14,15 +14,15 @@ mkdir "$HOME/bin"
 
 cd "$HOME/Downloads"
 
-tar -zxvf "mongodb-latest.tgz"
+#### tar -zxvf "mongodb-latest.tgz"
 
-MONGO_VERSION="$(ls | grep mongodb-linux)"
+#### MONGO_VERSION="$(ls | grep mongodb-linux)"
 
-mv "$MONGO_VERSION" "mongodb"
+#### mv "$MONGO_VERSION" "mongodb"
 
 # export PATH="$HOME/Downloads/mongodb/bin:$PATH" Esta linea es volatil
 
-mkdir -p "$HOME/mongodata/db"
+#### mkdir -p "$HOME/mongodata/db"
 
 tar xvf "node-latest.tar.xz"
 

@@ -35,7 +35,8 @@ gulp.task("scss_site_d", () =>
         sass.logError
       )
     )
-    .pipe(concat("dist/static/site/css/style.min.css"))
+    .pipe(concat("dist/css/style.min.css"))
+    // .pipe(concat("dist/static/site/css/style.min.css"))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("."))
 );
@@ -81,5 +82,3 @@ gulp.task("scss_admin_d", () =>
 );
 
 gulp.task("scss_dist_admin", ["scss_admin_d"]);
-
-

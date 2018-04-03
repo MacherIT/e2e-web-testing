@@ -56,7 +56,8 @@ gulp.task("js_site_d", () => {
     .src(["app/site/src/libs/**/*.js"])
     .pipe(sourcemaps.init())
     .pipe(babel({ presets: ["env"] }))
-    .pipe(concat("dist/static/site/js/libs.min.js"))
+    .pipe(concat("dist/js/libs.min.js"))
+    // .pipe(concat("dist/static/site/js/libs.min.js"))
     .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("."));
@@ -123,5 +124,3 @@ gulp.task("js_admin_d", () => {
 });
 
 gulp.task("js_dist_admin", ["js_admin_d"]);
-
-

@@ -8,6 +8,66 @@ $mqMobileL: 425px;
 $mqMobileM: 375px;
 $mqMobileS: 320px;
 
+$fontAquawaxBlackTrial: "AquawaxBlackTrial";
+$fontAquawaxLightTrial: "AquawaxLightTrial";
+$fontAquawaxMediumTrial: "AquawaxMediumTrial";
+$fontTitilliumBold: "TitilliumBold";
+$fontTitilliumRegular: "TitilliumWebRegular";
+$fontTitilliumSemiBold: "TitilliumWebSemiBold";
+
+$colorVioletaOscuro: #272442;
+$colorVioletaBase: #2d2a53;
+$colorVioletaGrisaceo: #333759;
+$colorVioletaMedio: #432e69;
+$colorVioletaClaro: #5c408e;
+$colorCelestino: #5e77ae;
+$colorAmarillo: #ddd62e;
+$colorNaranja: #e29c46;
+
+/////
+
+.flex {
+  display: flex;
+  &.frow {
+    flex-direction: row;
+  }
+  &.fcolumn {
+    flex-direction: column;
+  }
+  &.jcenter {
+    justify-content: center;
+  }
+  &.jstart {
+    justify-content: flex-start;
+  }
+  &.jend {
+    justify-content: flex-end;
+  }
+  &.jaround {
+    justify-content: space-around;
+  }
+  &.jbetween {
+    justify-content: space-between;
+  }
+  &.acenter {
+    align-items: center;
+  }
+  &.astart {
+    align-items: flex-start;
+  }
+  &.aend {
+    align-items: flex-end;
+  }
+  &.aaround {
+    align-items: space-around;
+  }
+  &.abetween {
+    align-items: space-between;
+  }
+}
+
+/////
+
 @mixin minmaxwh($size) {
   width: $size !important;
   min-width: $size !important;
@@ -54,10 +114,20 @@ $mqMobileS: 320px;
   -webkit-filter: drop-shadow($sombra);
 }
 
-@mixin donut-chart($name, $perc, $size, $width, $base, $center, $color, $textColor: $color, $textSize: 40px) {
+@mixin donut-chart(
+  $name,
+  $perc,
+  $size,
+  $width,
+  $base,
+  $center,
+  $color,
+  $textColor: $color,
+  $textSize: 40px
+) {
   $color2: $color;
   $base2: $base;
-  $deg: ($perc/100*360)+deg;
+  $deg: ($perc/100 * 360) + deg;
   $deg1: 90deg;
   $deg2: $deg;
 
@@ -66,7 +136,7 @@ $mqMobileS: 320px;
     $base: $color;
     $color: $base2;
     $color2: $base2;
-    $deg1: ($perc/100*360+90)+deg;
+    $deg1: ($perc/100 * 360+90) + deg;
     $deg2: 0deg;
   }
 

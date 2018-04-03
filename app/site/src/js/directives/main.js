@@ -14,6 +14,31 @@ angular
       controller: "general.footer"
     };
   })
+  // .directive("hideAll", () => {
+  //   return {
+  //     restrict: "A",
+  //     link: (scope, elm, attrs) => {
+  //       $(elm).on("click", () => {
+  //         console.log('1');
+  //         $(attrs.hideAll).slideUp(100);
+  //       });
+  //     }
+  //   };
+  // })
+  .directive("slideNext", () => {
+    return {
+      restrict: "A",
+      link: (scope, elm, attrs) => {
+        $(elm).on("click", () => {
+          attrs.hideAll && $(attrs.hideAll).slideUp();
+          $(elm)
+            .next()
+            .stop()
+            .slideDown();
+        });
+      }
+    };
+  })
   .directive("loadFrame", () => {
     return {
       restrict: "A",

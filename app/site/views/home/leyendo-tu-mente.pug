@@ -1,0 +1,19 @@
+.flex.fcolumn.cuerpo
+  .titulo
+    span {{leyendoTuMente.titulo}}
+  .items
+    .flex.jcenter.astart
+      .flex.fcolumn.jcenter.acenter
+        .item(ng-repeat="item in leyendoTuMente.items | limitTo: 3 track by $index")
+          .titulo(hide-all="leyendo-tu-mente .cuerpo .texto", slide-next)
+            span {{item.titulo}}
+          .texto
+            p {{item.texto}}
+      .flex.fcolumn.jcenter.acenter
+        .item(ng-repeat="item in leyendoTuMente.items | limitTo: 3 : 3 track by $index")
+          .titulo(hide-all="leyendo-tu-mente .cuerpo .texto", slide-next)
+            span {{item.titulo}}
+          .texto
+            p {{item.texto}}
+  .video
+    iframe()

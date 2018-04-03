@@ -1,25 +1,28 @@
 angular.module("HomeModule", []).controller("home.index", ($scope, $http) => {
-  $scope.newsletters = {
-    email: "",
-    solicitado: false
-  };
+  $http.get("/assets/data/home/home.json").then(
+    ({ data }) => {
+      ({
+        cabecera: $scope.cabecera,
+        leyendoTuMente: $scope.leyendoTuMente,
+        imagenEmpresa: $scope.imagenEmpresa,
+        equipoMarketing: $scope.equipoMarketing,
+        featuresApp: $scope.featuresApp,
+        beneficios: $scope.beneficios,
+        ahorro: $scope.ahorro,
+        equipoAnt: $scope.equipoAnt
+      } = data);
+      $scope.featuresItemActivo = $scope.featuresApp.items[0];
+      $scope.equipoItemActivo = $scope.equipoAnt.items[0];
+    },
+    error => {
+      console.error(error);
+    }
+  );
 
-  $scope.newsletters.enviar = () => {
-    $http
-      .post("api/mailing/newsletters", {
-        email: $scope.newsletters.email
-      })
-      .then(
-        response => {
-          $scope.newsletters.solicitado = true;
-          $scope.newsletters.envioCorrecto = true;
-          console.log(response);
-        },
-        error => {
-          $scope.newsletters.solicitado = true;
-          $scope.newsletters.envioCorrecto = false;
-          console.error(error);
-        }
-      );
+  $scope.setFeaturesItemActivo = item => {
+    $scope.featuresItemActivo = item;
+  };
+  $scope.setEquipoItemActivo = item => {
+    $scope.equipoItemActivo = item;
   };
 });

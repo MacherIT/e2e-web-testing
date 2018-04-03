@@ -1,0 +1,51 @@
+beneficios {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/home/fondo-beneficios.png");
+  .cuerpo {
+    width: 70%;
+    .izquierda {
+      width: 60%;
+      & > .titulo {
+        margin-bottom: 20px;
+        span {
+          font-size: 200%;
+          color: #7eccc2;
+        }
+      }
+      .items {
+        flex-wrap: wrap;
+        .item {
+          width: 45%;
+          .titulo {
+            span {
+              font-size: 90%;
+              color: #7eccc2;
+            }
+          }
+          .texto {
+            p {
+              font-size: 85%;
+            }
+          }
+          .icono {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    .derecha {
+      width: 40%;
+      video {
+        height: 500px;
+      }
+    }
+  }
+}

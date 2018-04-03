@@ -1,5 +1,43 @@
 @import "../config";
 
 body.page-home {
-  @import "newsletters";
+  padding-bottom: 150px;
+  .seccion-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    @media all and (max-height: 450px){
+      min-height: 550px;
+      margin-bottom: 50px;
+    }
+    .cuerpo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+
+      span,
+      a,
+      p {
+        color: #fff;
+      }
+
+      .titulo:first-of-type {
+        span {
+          font-family: $fontTitilliumBold;
+        }
+      }
+    }
+  }
+  @import "cabecera";
+  @import "leyendo-tu-mente";
+  @import "imagen-empresa";
+  @import "equipo-marketing";
+  @import "features-app";
+  @import "beneficios";
+  @import "ahorro";
+  @import "equipo-ant";
 }

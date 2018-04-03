@@ -1,0 +1,14 @@
+.cuerpo
+  .flex.jcenter.acenter.izquierda
+    .reloj(style="background-image: url({{ahorro.reloj}})")
+  .flex.jcenter.astart.fcolumn.derecha
+    .titulo
+      span {{ahorro.titulo}}
+    .flex.jbetween.acenter.items
+      .flex.jstart.acenter.item(ng-repeat="item in ahorro.items track by $index")
+        .icono(style="background-image: url({{item.icono}})")
+        .flex.jcenter.astart.fcolumn
+          .titulo
+            span {{item.titulo}}
+          .texto
+            p {{item.texto}}

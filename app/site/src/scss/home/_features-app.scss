@@ -1,0 +1,85 @@
+features-app {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/home/fondo-features-app.png");
+  .cuerpo {
+    & > .titulo {
+      font-size: 150%;
+    }
+    .item {
+      font-size: 90%;
+      max-width: 300px;
+      cursor: pointer;
+      @include ease-transition();
+      &:hover > .icono {
+        @include grayscale(0);
+      }
+      &:hover .titulo {
+        span {
+          color: #fff;
+        }
+      }
+      .icono {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        @include grayscale(0.5);
+      }
+      .titulo {
+        margin-top: 15px;
+        span {
+          color: #aaa;
+        }
+      }
+    }
+    .izquierda {
+      height: 80%;
+      width: 33.333%;
+      .item {
+        .icono {
+          margin-left: 30px;
+        }
+        .texto {
+          text-align: right;
+        }
+      }
+    }
+    .centro {
+      .celular {
+        background-image: url("/assets/images/home/features-app/phone2.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 230px;
+        height: 467.1875px;
+        margin: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .pantalla {
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: block;
+          width: 196px;
+          height: 100%;
+        }
+      }
+    }
+    .derecha {
+      width: 33.333%;
+      height: 80%;
+      .item {
+        .icono {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.cuerpo.flex.fcolumn
+  .titulo
+    span {{featuresApp.titulo}}
+  .flex.jcenter.acenter
+    .flex.jaround.aend.fcolumn.izquierda
+      .flex.jend.astart.item(ng-click="setFeaturesItemActivo(item)", ng-repeat="item in featuresApp.items | limitTo: 3 track by $index")
+        .flex.jcenter.aend.fcolumn
+          .titulo
+            span {{item.titulo}}
+          .texto.fadeIn(ng-if="featuresItemActivo == item")
+            span {{item.texto}}
+        .icono(style="background-image: url({{item.icono}})")
+    .flex.jcenter.acenter.centro
+      .celular
+        .pantalla(style="background-image: url({{featuresItemActivo.pantalla}})")
+    .flex.jaround.astart.fcolumn.derecha
+      .flex.jstart.astart.item(ng-click="setFeaturesItemActivo(item)", ng-repeat="item in featuresApp.items | limitTo: 3 : 3 track by $index")
+        .icono(style="background-image: url({{item.icono}})")
+        .flex.jcenter.astart.fcolumn
+          .titulo
+            span {{item.titulo}}
+          .texto.fadeIn(ng-if="featuresItemActivo == item")
+            span {{item.texto}}

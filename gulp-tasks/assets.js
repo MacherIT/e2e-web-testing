@@ -14,7 +14,10 @@ gulp.task("assets_watch", ["assets_site"], () => {
 });
 
 gulp.task("assets_site_d", () =>
-  gulp.src(["app/site/assets/**/*"]).pipe(gulp.dest("dist/static/site/assets/"))
+  gulp.src(["app/site/assets/**/*"]).pipe(gulp.dest("dist/assets/"))
 );
+// gulp.task("assets_site_d", () =>
+//   gulp.src(["app/site/assets/**/*"]).pipe(gulp.dest("dist/static/site/assets/"))
+// );
 
 gulp.task("assets_dist", ["assets_site_d"]);
