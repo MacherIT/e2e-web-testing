@@ -5,8 +5,17 @@ ahorro {
   .cuerpo {
     width: 85%;
     align-items: flex-end !important;
+    @media all and (max-width: $mobileC1){
+      width: 90%;
+    }
     .izquierda {
       width: 50%;
+      @media all and (max-width: $mobileC1){
+        width: 100%;
+        .main-titulo{
+          margin-bottom: 30px;
+        }
+      }
       .reloj{
         display: block;
         width: 100%;
@@ -18,7 +27,10 @@ ahorro {
     }
     .derecha {
       width: 50%;
-      & > .titulo {
+      @media all and (max-width: $mobileC1){
+        width: 100%;
+      }
+      .main-titulo {
         margin-bottom: 20px;
         span {
           font-size: 200%;
@@ -29,6 +41,9 @@ ahorro {
         flex-wrap: wrap;
         .item {
           width: 45%;
+          @media all and (max-width: $mobileC1){
+            width: 100%;
+          }
           .titulo {
             span {
               font-size: 90%;

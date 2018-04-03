@@ -1,10 +1,12 @@
 .cuerpo.fadeIn
   .flex.jcenter.jstart.fcolumn.izquierda
-    .titulo
+    .main-titulo
       span {{cabecera.titulo}}
-    .texto
+    .texto.mobileI
       p {{cabecera.texto}}
-  .flex.jcenter.acenter.derecha
+  .flex.jcenter.acenter.derecha.fcolumn
     .imagen(style="background-image: url({{cabecera.imagen}})")
-.scroll-down(scroll-to-target, target="leyendo-tu-mente")
+    .texto.mobileV
+      p {{cabecera.texto}}
+.scroll-down.mobileI(scroll-to-target, target="leyendo-tu-mente")
   i.fa.fa-chevron-down

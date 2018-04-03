@@ -3,19 +3,28 @@ equipo-ant {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/assets/images/home/fondo-equipo-ant.png");
+  @media all and (max-width: $mobileC1) {
+    background-image: none;
+  }
   .cuerpo {
     width: 70%;
-    .titulo{
+    @media all and (max-width: $mobileC1) {
+      width: 80%;
+    }
+    .main-titulo {
       margin-bottom: 25px;
-      span{
+      span {
         font-size: 150%;
       }
     }
-    .descripcion{
-      p{
+    .descripcion {
+      p {
         max-width: 350px;
         text-align: center;
         font-size: 90%;
+        @media all and (max-width: $mobileC1) {
+          max-width: none;
+        }
       }
     }
     .menu {
@@ -31,6 +40,22 @@ equipo-ant {
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
+          @media all and (max-width: $mobileC1) {
+            &.active {
+              &.administrador {
+                @include sombra(0 4px 0 0 #f7d156);
+              }
+              &.diseñador {
+                @include sombra(0 4px 0 0 #df1284);
+              }
+              &.comunicador {
+                @include sombra(0 4px 0 0 #2dafd0);
+              }
+              &.marketier {
+                @include sombra(0 4px 0 0 #8dc43c);
+              }
+            }
+          }
         }
         .titulo {
           @include ease-transition();
@@ -66,9 +91,23 @@ equipo-ant {
     }
     .item {
       width: 100%;
+      @media all and (max-width: $mobileC1){
+        flex-wrap: wrap;
+        margin: 15px 0;
+      }
       .columna {
         width: 45%;
+        @media all and (max-width: $mobileC1){
+          width: 100%;
+        }
         .titulo {
+          @media all and (max-width: $mobileC1){
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 15px;
+          }
           &.administrador {
             span {
               color: #f7d156;
@@ -90,13 +129,16 @@ equipo-ant {
             }
           }
         }
-        .imagen{
+        .imagen {
           background-position: center;
           background-size: contain;
           background-repeat: no-repeat;
           display: block;
           width: 100%;
           height: 350px;
+          @media all and (max-width: $mobileC1){
+            height: 200px;
+          }
         }
       }
     }

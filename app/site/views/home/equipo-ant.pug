@@ -1,10 +1,10 @@
 .cuerpo
   .flex.jcenter.acenter.fcolumn
-    .titulo
+    .main-titulo
       span {{equipoAnt.titulo}}
     .descripcion
       p {{equipoAnt.descripcion}}
-    .menu.flex.jcenter.aend
+    .menu.flex.jcenter.aend.mobileI
       .menu-item(ng-repeat="item in equipoAnt.items track by $index", ng-click="setEquipoItemActivo(item)")
         .flex.jcenter.acenter.fcolumn
           .icono(style="background-image: url({{item.icono}})")
@@ -18,3 +18,7 @@
           p {{item.texto}}
       .flex.jcenter.acenter.columna
         .imagen.fadeIn(style="background-image: url({{item.imagen}})")
+    .menu.flex.jcenter.aend.mobileV
+      .menu-item(ng-repeat="item in equipoAnt.items track by $index", ng-click="setEquipoItemActivo(item)")
+        .flex.jcenter.acenter.fcolumn
+          .icono(style="background-image: url({{item.icono}})", ng-class="{active: equipoItemActivo.titulo == item.titulo}", class="{{ item.titulo | lowercase }}")

@@ -1,6 +1,6 @@
-.cuerpo
+.cuerpo.flex.fmcolumnreverse
   .flex.jcenter.astart.fcolumn.izquierda
-    .titulo
+    .main-titulo.mobileI
       span {{beneficios.titulo}}
     .flex.jbetween.acenter.items
       .flex.jstart.acenter.item(ng-repeat="item in beneficios.items track by $index")
@@ -15,3 +15,5 @@
       source(src="{{beneficios.video.mp4}}", type="video/mp4")
       source(src="{{beneficios.video.webm}}", type="video/webm")
       | Su navegador no soporta el formato del video
+  .main-titulo.mobileV
+    span {{beneficios.titulo}}

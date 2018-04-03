@@ -3,15 +3,23 @@ features-app {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/assets/images/home/fondo-features-app.png");
+  @media all and (max-width: $mobileC1) {
+    background-image: none;
+  }
   .cuerpo {
-    & > .titulo {
-      font-size: 150%;
+    .main-titulo {
+      span {
+        font-size: 150%;
+      }
     }
     .item {
       font-size: 90%;
       max-width: 300px;
       cursor: pointer;
       @include ease-transition();
+      @media all and (max-width: $mobileC1) {
+        cursor: auto;
+      }
       &:hover > .icono {
         @include grayscale(0);
       }
@@ -29,24 +37,61 @@ features-app {
         align-items: center;
         width: 50px;
         height: 50px;
-        @include grayscale(0.5);
+        @include grayscale(0.3);
       }
       .titulo {
         margin-top: 15px;
         span {
           color: #aaa;
+          @media all and (max-width: $mobileC1) {
+            color: #fff;
+            font-family: $fontTitilliumSemiBold;
+          }
+        }
+      }
+      .texto {
+        p {
+          @media all and (max-width: $mobileC1) {
+            color: #ccc;
+          }
         }
       }
     }
     .izquierda {
       height: 80%;
       width: 33.333%;
+      @media all and (max-width: $mobileC1) {
+        width: 100%;
+        height: auto;
+      }
       .item {
         .icono {
           margin-left: 30px;
         }
         .texto {
           text-align: right;
+          @media all and (max-width: $mobileC1) {
+            text-align: left;
+          }
+        }
+      }
+    }
+    .iconos {
+      width: 100%;
+      .icono {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        @include grayscale(0.3);
+        cursor: pointer;
+        @include ease-transition();
+        &.active{
+          @include grayscale(0);
         }
       }
     }
@@ -62,6 +107,9 @@ features-app {
         display: flex;
         justify-content: center;
         align-items: center;
+        @media all and (max-width: $mobileC1) {
+          margin: 30px;
+        }
         .pantalla {
           background-position: center;
           background-size: contain;

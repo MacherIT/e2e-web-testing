@@ -8,6 +8,8 @@ $mqMobileL: 425px;
 $mqMobileM: 375px;
 $mqMobileS: 320px;
 
+$mobileC1: 1000px;
+
 $fontAquawaxBlackTrial: "AquawaxBlackTrial";
 $fontAquawaxLightTrial: "AquawaxLightTrial";
 $fontAquawaxMediumTrial: "AquawaxMediumTrial";
@@ -63,6 +65,37 @@ $colorNaranja: #e29c46;
   }
   &.abetween {
     align-items: space-between;
+  }
+  &.fmcolumn{
+    @media all and (max-width: $mobileC1){
+      flex-direction: column !important;
+    }
+  }
+  &.fmrow{
+    @media all and (max-width: $mobileC1){
+      flex-direction: row !important;
+    }
+  }
+  &.fmcolumnreverse{
+    flex-direction: column-reverse;
+  }
+  &.fmrowreverse{
+    flex-direction: column-reverse;
+  }
+}
+
+/////
+
+.mobileI{
+  @media all and (max-width: $mobileC1){
+    display: none !important;
+  }
+}
+
+.mobileV{
+  display: none;
+  @media all and (max-width: $mobileC1){
+    display: flex;
   }
 }
 

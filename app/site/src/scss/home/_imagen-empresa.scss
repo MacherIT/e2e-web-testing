@@ -5,7 +5,14 @@ imagen-empresa {
     .izquierda {
       max-width: 350px;
       width: 35%;
-      .titulo {
+      @media all and (max-width: $mobileC1) {
+        max-width: none;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 300px;
+      }
+      .main-titulo {
         margin-bottom: 30px;
         span {
           line-height: 120%;
@@ -17,11 +24,28 @@ imagen-empresa {
         p {
           font-size: 95%;
           color: #ccc;
+          @media all and (max-width: $mobileC1) {
+            text-align: justify;
+          }
+        }
+      }
+      .descuento{
+        span{
+          padding: 10px;
+          color: #ef578a;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 80%;
+          border-radius: 25px;
+          border: 1.5px solid #ef578a;
         }
       }
     }
     .derecha {
       width: 60%;
+      @media all and (max-width: $mobileC1) {
+        display: none;
+      }
       .imagen {
         width: 100%;
         height: 300px;

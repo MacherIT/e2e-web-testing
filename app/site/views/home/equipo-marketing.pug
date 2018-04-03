@@ -1,8 +1,10 @@
 .cuerpo
-  .flex.jcenter.acenter.izquierda
+  .flex.jcenter.acenter.izquierda.fmcolumn
+    .main-titulo.mobileV
+      span {{equipoMarketing.titulo}}
     .imagen(style="background-image: url({{equipoMarketing.imagen}})")
   .flex.jcenter.jstart.fcolumn.derecha
-    .titulo
+    .main-titulo.mobileI
       span {{equipoMarketing.titulo}}
     .texto
       p {{equipoMarketing.texto}}

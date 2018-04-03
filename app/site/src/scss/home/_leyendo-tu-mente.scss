@@ -1,8 +1,8 @@
 leyendo-tu-mente {
   .cuerpo {
     justify-content: space-around;
-    & > .titulo {
-      margin-bottom: 40px;
+    .main-titulo {
+      margin-bottom: 15px;
       span {
         font-size: 150%;
       }
@@ -13,6 +13,12 @@ leyendo-tu-mente {
       display: flex;
       justify-content: center;
       align-items: center;
+      @media all and (max-width: $mobileC1) {
+        & > div > div {
+          margin: auto;
+          width: 90%;
+        }
+      }
       .item {
         width: 350px;
         display: flex;
@@ -21,6 +27,9 @@ leyendo-tu-mente {
         flex-direction: column;
         margin: 5px 15px;
         @include sombra(0 2px 3px 0 #224);
+        @media all and (max-width: $mobileC1) {
+          width: 100%;
+        }
         .titulo {
           width: 100%;
           font-family: $fontTitilliumSemiBold;
@@ -30,7 +39,10 @@ leyendo-tu-mente {
           cursor: pointer;
           @include ease-transition(100ms);
           @include not-selectable;
-          &:active{
+          @media all and (max-width: $mobileC1) {
+            padding: 15px;
+          }
+          &:active {
             background-color: #484b69;
           }
           &::before {
@@ -41,13 +53,13 @@ leyendo-tu-mente {
             margin-right: 10px;
           }
         }
-        .texto{
+        .texto {
           background-color: $colorVioletaOscuro;
           padding: 10px;
           max-height: 350px;
           overflow: auto;
           display: none;
-          p{
+          p {
             font-size: 90%;
           }
         }
@@ -55,11 +67,17 @@ leyendo-tu-mente {
     }
     .video {
       width: 100%;
+      @media all and (max-width: $mobileC1) {
+        width: 90%;
+      }
       iframe {
         width: 100%;
         height: 350px;
         border: 0;
         background-color: $colorVioletaGrisaceo;
+        @media all and (max-width: $mobileC1) {
+          height: 250px;
+        }
       }
     }
   }

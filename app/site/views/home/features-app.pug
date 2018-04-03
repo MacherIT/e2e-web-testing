@@ -1,8 +1,8 @@
 .cuerpo.flex.fcolumn
-  .titulo
+  .main-titulo
     span {{featuresApp.titulo}}
-  .flex.jcenter.acenter
-    .flex.jaround.aend.fcolumn.izquierda
+  .flex.jcenter.acenter.fmcolumn
+    .flex.jaround.aend.fcolumn.izquierda.mobileI
       .flex.jend.astart.item(ng-click="setFeaturesItemActivo(item)", ng-repeat="item in featuresApp.items | limitTo: 3 track by $index")
         .flex.jcenter.aend.fcolumn
           .titulo
@@ -13,7 +13,7 @@
     .flex.jcenter.acenter.centro
       .celular
         .pantalla(style="background-image: url({{featuresItemActivo.pantalla}})")
-    .flex.jaround.astart.fcolumn.derecha
+    .flex.jaround.astart.fcolumn.derecha.mobileI
       .flex.jstart.astart.item(ng-click="setFeaturesItemActivo(item)", ng-repeat="item in featuresApp.items | limitTo: 3 : 3 track by $index")
         .icono(style="background-image: url({{item.icono}})")
         .flex.jcenter.astart.fcolumn
@@ -21,3 +21,13 @@
             span {{item.titulo}}
           .texto.fadeIn(ng-if="featuresItemActivo == item")
             span {{item.texto}}
+    .izquierda.mobileV
+      .flex.jend.astart.item(ng-repeat="item in featuresApp.items track by $index")
+        .flex.jstart.astart.fcolumn(ng-if="featuresItemActivo == item")
+          .titulo
+            span {{item.titulo}}
+          .texto.fadeIn
+            p {{item.texto}}
+    .flex.jcenter.acenter.iconos.mobileV
+      .icono(ng-click="setFeaturesItemActivo(item)", ng-repeat="item in featuresApp.items track by $index", style="background-image: url({{item.icono}})", ng-class="{active: featuresItemActivo == item}")
+          

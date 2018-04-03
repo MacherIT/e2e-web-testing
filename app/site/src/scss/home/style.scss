@@ -2,6 +2,9 @@
 
 body.page-home {
   padding-bottom: 150px;
+  @media all and (max-width: $mobileC1) {
+    padding: 0;
+  }
   .seccion-home {
     display: flex;
     justify-content: center;
@@ -9,9 +12,8 @@ body.page-home {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    @media all and (max-height: 450px){
-      min-height: 550px;
-      margin-bottom: 50px;
+    @media all and (max-width: $mobileC1) {
+      min-height: 0;
     }
     .cuerpo {
       display: flex;
@@ -19,15 +21,30 @@ body.page-home {
       align-items: center;
       opacity: 0;
 
+      @media all and (max-width: $mobileC1) {
+        padding: 35px 0;
+      }
+
       span,
       a,
       p {
         color: #fff;
       }
 
-      .titulo:first-of-type {
+      .main-titulo {
+        @media all and (max-width: $mobileC1) {
+          max-width: 200px;
+          text-align: center;
+        }
         span {
           font-family: $fontTitilliumBold;
+          @media all and (max-width: $mobileC1) {
+            font-size: 100% !important;
+            text-transform: uppercase !important;
+            font-family: $fontTitilliumRegular !important;
+            font-weight: bold !important;
+            white-space: pre-line !important;
+          }
         }
       }
     }

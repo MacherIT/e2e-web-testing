@@ -1,8 +1,8 @@
 .flex.fcolumn.cuerpo
-  .titulo
+  .main-titulo
     span {{leyendoTuMente.titulo}}
   .items
-    .flex.jcenter.astart
+    .flex.jcenter.astart.fmcolumn
       .flex.fcolumn.jcenter.acenter
         .item(ng-repeat="item in leyendoTuMente.items | limitTo: 3 track by $index")
           .titulo(hide-all="leyendo-tu-mente .cuerpo .texto", slide-next)
