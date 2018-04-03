@@ -19,7 +19,7 @@ gulp.task("pug_watch", ["pug"], () => {
 
 gulp.task("pug_d", () =>
   gulp
-    .src("app/static/**/*.pug")
+    .src("app/site/**/*.pug")
     .pipe(pug({}))
     .pipe(gulp.dest("dist/"))
 );

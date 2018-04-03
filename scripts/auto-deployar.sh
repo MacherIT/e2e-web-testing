@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IP_SERVIDOR="75.98.172.211"
-DB_MONGO="ant"
+DB_MONGO="antweb"
 
 init() {
 

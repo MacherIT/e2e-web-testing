@@ -1,0 +1,228 @@
+{
+  "cabecera": {
+    "titulo": "Ant convierte\nsu comercio en\nuna compañía\nOnline Profesional",
+    "texto":
+      "ANT es una plataforma que profesionaliza sus redes sociales a traves de un equipo de expertos en las areas de Marketing, Comunicacion y Tecnologia, que trabajan para usted, generando multiples oportunidades de venta y una imagen mas solida, seria y moderna de su empresa o emprendimiento.",
+    "imagen": "/assets/images/home/cabecera.png"
+  },
+  "leyendoTuMente": {
+    "titulo": "Estamos leyendo tu mente",
+    "items": [
+      {
+        "titulo": "¿Qué es Ant?",
+        "texto":
+          "ANT es una solucion online que profesionaliza las redes sociales de empresas y profesionales, dandoles una imagen mas profesional y generando contenidos de valor para sus potenciales clientes. ANT le brinda un equipo de expertos para que diseñen, redacten, administren y monitoreen todos los contenidos y actividades de sus redes sociales a traves de una plataforma movil inteligente."
+      },
+      {
+        "titulo": "¿Por qué debería utilizar Ant?",
+        "texto":
+          "Si esta buscando dar el siguiente paso, generar oportunidades de venta masivamente, darse a conocer con una imagen solida y profesional, ANT es la solucion perfecta al mejor precio del mercado."
+      },
+      {
+        "titulo": "¿Cómo funcionar el sistema?",
+        "texto":
+          "ANT le asignara inicialmente un ejecutivo de cuentas, que sera quien lo asista y asesore en todo momento. Tambien se le asignara un equipo de profesionales de Marketing, comunicacion, diseño, y administracion que trabajaran en conjunto en su red social, con quienes podra interactuar a traves de nuestra App Movil. De esta forma, y dependiendo de su plan, su equipo de ocupara por completo de hacer crecer su red y de generar nuevas oportunidades para su negocio."
+      },
+      {
+        "titulo": "¿Qué tiene de distinto a otros servicios?",
+        "texto":
+          "Inicialmente ANT cuenta con un respaldo tecnologico distinto al de cualquier otra solucion del mercado, permitiendole trabajar de manera comoda, simple y transparente con los profesionales de nuestra agencia como si ustuviesemos en el mismo lugar fisico que esta usted. A diferencia de otros servicios ANT le brinda un equipo interdiciplinario que le garantiza un proceso efectivo al fin del dia, olvidese de los diseñadores graficos que hacen el trabajo de un comunicador solcial, o de marketier que intenta hacer el trabajo de un diseñador grafico. En ANT cada tarea es realizada por un especialista del area que lo requiere.\nFinalmente, gracias a un pulido y automatizado proceso de trabajo y el desarrollo de la tecnologia correspondiente logramos ofrecer el servicio a un valor extremadamente accesible que no existe en el mercado actualmente."
+      },
+      {
+        "titulo": "¿Cómo funciona la App?",
+        "texto":
+          "La APP fue creada para que usted pueda estar conectado con su equipo de expertos en todo momento, y para que pueda conocer de manera simple y rapida todo lo que sucede en sus redes y que tipo de resultados esta generando. Ademas de esto la APP le ofrece multiples herramientas como el calendario editorial, para conocer todos los contenidos que se crearon e incluso saber que dia y hora seran publicados, o el sistema de Metas, que le permite configurar su ANT para que el Asistente Virtual le notifique por ej, cuando alcanzo 100 nuevos seguidores."
+      },
+      {
+        "titulo": "¿Cuánto cuesta Ant?",
+        "texto":
+          "El valor de ANT varia dependiendo el plan que usted contrate. Actualmente ofrecemos 3 planes distintos que pueden adaptarse a sus necesidades, para elegir cual es el plan que mejor se adapta a sus necesidades le sugerimos que visite 'NUESTRA' pagina de Precios, o bien complete el formulario de contacto y nos contactaremos en breve."
+      }
+    ]
+  },
+  "imagenEmpresa": {
+    "titulo": "Cambie la imagen de su empresa",
+    "texto":
+      "Las redes sociales son la vidriera digital de las empresas y profesionales en todo el mundo, visitadas por millones de personas minuto a minuto. Hagamos que luzca como la multinacional que algun dia sera hoy mismo.",
+    "imagen": "/assets/images/home/imagen-empresa.png"
+  },
+  "equipoMarketing": {
+    "titulo": "Su equipo de\nmarketing\nen su bolsillo",
+    "texto":
+      "Por medio de la APP puede estar al tanto de lo que necesita saber para aumentar sus ventas y tomar desiciones de su negocio mientras que a su vez esta conectado con su equipo de expertos las 24 horas.",
+    "imagen": "/assets/images/home/equipo-marketing.png"
+  },
+  "featuresApp": {
+    "titulo": "Features app",
+    "items": [
+      {
+        "titulo": "Información en vivo",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/features-app/icono-1.png",
+        "pantalla": "/assets/images/home/features-app/pantalla-1.jpg"
+      },
+      {
+        "titulo": "Asistente virtual",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/features-app/icono-2.png",
+        "pantalla": "/assets/images/home/features-app/pantalla-2.jpg"
+      },
+      {
+        "titulo": "Calendario inteligente",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/features-app/icono-3.png",
+        "pantalla": "/assets/images/home/features-app/pantalla-3.jpg"
+      },
+      {
+        "titulo": "Comunicación inmediata",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/features-app/icono-4.png",
+        "pantalla": "/assets/images/home/features-app/pantalla-4.jpg"
+      },
+      {
+        "titulo": "Resumen de actividad",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/features-app/icono-5.png",
+        "pantalla": "/assets/images/home/features-app/pantalla-5.jpg"
+      },
+      {
+        "titulo": "Información de mercado",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/features-app/icono-6.png",
+        "pantalla": "/assets/images/home/features-app/pantalla-6.jpg"
+      }
+    ]
+  },
+  "beneficios": {
+    "titulo": "Beneficios",
+    "items": [
+      {
+        "titulo": "Ventas",
+        "texto": "Generar oportunidades de venta masivamente.",
+        "icono": "/assets/images/home/beneficios/icono-1.png"
+      },
+      {
+        "titulo": "Interacción",
+        "texto":
+          "Fidelizar los clientes existentes a través de sorteos y oportunidades para ellos.",
+        "icono": "/assets/images/home/beneficios/icono-2.png"
+      },
+      {
+        "titulo": "Captar clientes",
+        "texto":
+          "Entender quienes son su potenciales clientes y que necesita para captarlos.",
+        "icono": "/assets/images/home/beneficios/icono-3.png"
+      },
+      {
+        "titulo": "Enfoque",
+        "texto": "Entender quiénes son sus clientes y qué quieren de usted.",
+        "icono": "/assets/images/home/beneficios/icono-4.png"
+      },
+      {
+        "titulo": "Mayor alcance",
+        "texto":
+          "Llegar a miles de personas en poco tiempo para hacer conocida la marca/tienda.",
+        "icono": "/assets/images/home/beneficios/icono-5.png"
+      },
+      {
+        "titulo": "Equipo Ant",
+        "texto": "Contar con un equipo multidisciplinario al menor costo.",
+        "icono": "/assets/images/home/beneficios/icono-6.png"
+      }
+    ],
+    "video": {
+      "mp4": "/assets/videos/home/beneficios.mp4",
+      "webm": "/assets/videos/home/beneficios.webm"
+    }
+  },
+  "ahorro": {
+    "titulo": "¿Qué ahorra?",
+    "items": [
+      {
+        "titulo": "Postear",
+        "texto": "Postear sus contenidos todos los días.",
+        "icono": "/assets/images/home/ahorro/icono-1.png"
+      },
+      {
+        "titulo": "Segmentar",
+        "texto": "Segmentar el tipo de audiencia que quiere alcanzar.",
+        "icono": "/assets/images/home/ahorro/icono-2.png"
+      },
+      {
+        "titulo": "Redactar",
+        "texto":
+          "Redactar los contenidos para captar más seguidores y compradores.",
+        "icono": "/assets/images/home/ahorro/icono-3.png"
+      },
+      {
+        "titulo": "Monitorear",
+        "texto": "Monitorear los resultados y actividades de la competencia.",
+        "icono": "/assets/images/home/ahorro/icono-4.png"
+      },
+      {
+        "titulo": "Responder",
+        "texto": "Responder y dar seguimiento a los comentarios y consultas.",
+        "icono": "/assets/images/home/ahorro/icono-5.png"
+      },
+      {
+        "titulo": "Diseñar",
+        "texto": "Diseñar las piezas gráficas que deben poseer sus posts.",
+        "icono": "/assets/images/home/ahorro/icono-6.png"
+      },
+      {
+        "titulo": "Analizar",
+        "texto":
+          "Analizar las estadisticas para la toma efectiva de decisiones para hacer crecer su red.",
+        "icono": "/assets/images/home/ahorro/icono-7.png"
+      },
+      {
+        "titulo": "Planificar",
+        "texto":
+          "Configurar con anticipación el calendario editorial de sus contenidos.",
+        "icono": "/assets/images/home/ahorro/icono-8.png"
+      }
+    ],
+    "reloj": "/assets/images/home/ahorro/reloj.png"
+  },
+  "equipoAnt": {
+    "titulo": "Ant le asigna su equipo",
+    "descripcion":
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "items": [
+      {
+        "titulo": "Administrador",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/equipo-ant/icono-administrador.png",
+        "imagen": "/assets/images/home/equipo-ant/imagen-administrador.png"
+      },
+      {
+        "titulo": "Diseñador",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/equipo-ant/icono-disenador.png",
+        "imagen": "/assets/images/home/equipo-ant/imagen-disenador.png"
+      },
+      {
+        "titulo": "Comunicador",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/equipo-ant/icono-comunicador.png",
+        "imagen": "/assets/images/home/equipo-ant/imagen-comunicador.png"
+      },
+      {
+        "titulo": "Marketier",
+        "texto":
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "icono": "/assets/images/home/equipo-ant/icono-marketier.png",
+        "imagen": "/assets/images/home/equipo-ant/imagen-marketier.png"
+      }
+    ]
+  }
+}
