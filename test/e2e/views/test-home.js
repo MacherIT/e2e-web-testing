@@ -4,27 +4,29 @@
 
 // https://stackoverflow.com/questions/20927652/how-to-use-protractor-on-non-angularjs-website/23198865#23198865
 
-// let el = element.all(by.css(".main-titulo"));
-// expect(el.first().getText()).toBe(
-//   "ANT CONVIERTE\nSU COMERCIO EN\nUNA COMPAÑÍA\nONLINE PROFESIONAL"
-// );
-// let el = element(
-//   by.css(
-//     "leyendo-tu-mente .items .item"
-//   )
-// );
-
-// element(by.css("leyendo-tu-mente"))
-//   .getLocation()
-//   .then(offset => {
-//     browser.driver
-//       .executeScript("window.scrollTo(0,arguments[0]);", offset.y + 300)
-//       .then(() => {});
-//   });
-
 describe("leyendo tu mente", () => {
+  browser.get("http://localhost:3000");
   it("verifica funcionalidad y visibilidad de desplegables", () => {
-    browser.get("http://localhost:3000");
+    browser.driver.sleep(1000);
+
+    // element(by.css("leyendo-tu-mente"))
+    //   .getLocation()
+    //   .then(offset => {
+    //     browser.driver
+    //       .executeScript("window.scrollTo(0,arguments[0]);", offset.y)
+    //       .then(() => {});
+    //   });
+
+    expect(
+      element
+        .all(by.css(".main-titulo"))
+        .first()
+        .getText()
+        .then(titulo => titulo.toLowerCase())
+    ).toBe(
+      "ant convierte\nsu comercio en\nuna compañía\nonline profesional",
+      "El primer título debería ser correcto"
+    );
 
     expect(
       element
@@ -32,7 +34,6 @@ describe("leyendo tu mente", () => {
         .first()
         .isDisplayed()
     ).toBe(false, "Los items deberian ser invisibles");
-
     browser.driver.executeScript("window.scrollTo(0,20000);").then(() => {
       browser.driver.sleep(1000);
       expect(
